@@ -9,6 +9,7 @@ int reverse(int x) {
     while (x != 0) {
         int remainder = x % 10;
         x /= 10;
+        //this below check digit is valid or exit.
         if (rev > max / 10 || (rev == max / 10 && remainder > 7)) return 0;
         if (rev < min / 10 || (rev == min / 10 && remainder < -8)) return 0;
         rev = rev * 10 + remainder;
